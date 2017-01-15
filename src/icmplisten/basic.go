@@ -5,10 +5,11 @@ import (
 	"syscall"
 )
 
-// The ICMP Receive Buffer size, small but enough
+// The ICMP Receive Buffer size, no need to be big as icmp package is small.
 const ICMPbufsize = 512
 
 type Sock struct {
+	// The buffer that stores ICMP packages. New data will override old.
 	data [ICMPbufsize]byte
 	sock int
 	name string
