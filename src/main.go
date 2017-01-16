@@ -34,7 +34,7 @@ func sendSomething() {
 		fmt.Println("in sendSomething: %v", err)
 		return
 	}
-	icmpsend.Send(ip, 0)
+	icmpsend.Send(ip, 2)
 }
 
 func main() {
